@@ -1,0 +1,5 @@
+Why the efficiency of the program is not increased with an increased number of threads?
+
+Because it is a queue which has a fixed size where only one consumer at the time can actually lock and consume an element.
+So increasing the number of threads would only result in more threads waiting in the queue for their turn to producer or consume.
+The only thing you are gonna get is less elements per thread but it will not increase the performanc.
