@@ -1,6 +1,0 @@
-Det som händer är att programmet förväntar sig x-nummer men får istället något annat.
-
-Anledning är att vi har fått ett race condition, lock() sker efter getNext(), där flera trådar försöker accessa 
-samma data och ändra den. Dessa trådar "race:ar" alltså om datan och därför får man
-oftast oönskade resultat som i det här fallet där man konstant får fel nummer. Trådarna kan alltså ändra på data som
-andra trådar redan använder. 
